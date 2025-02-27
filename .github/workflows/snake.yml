@@ -1,31 +1,32 @@
-name: Generate Snake Animation
+name: Generate snake animation
 
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Ejecuta el workflow todos los días a medianoche UTC
-  workflow_dispatch:  # Permite ejecutarlo manualmente desde Actions
+  schedule: # execute every 12 hours
+    - cron: "* */12 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - master
 
 jobs:
   generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    timeout-minutes: 5
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@master
+    steps:
+      - name: generate snake.svg
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg
+          outputs: dist/snake.svg?palette=github-dark
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: snake-artifact
-          path: dist/snake.svg
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v2
+      - name: push snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
