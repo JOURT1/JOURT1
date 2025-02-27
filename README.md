@@ -1,11 +1,11 @@
-<h2 align="left">Hi 👋! I'm Jhoel<br>💻 Software Developer | Passionate about Code & Innovation<br>Driven software developer with a strong focus on building scalable, efficient, and user-centric solutions. Passionate about problem-solving, continuous learning, and leveraging technology to create impactful digital experiences.<br><br>Dedicated to writing clean, maintainable code and collaborating on innovative projects that push boundaries. Always exploring new technologies and best practices to deliver high-quality software.<br><br>Let’s connect and build something great together!</h2>
+<h4 align="left">Hi 👋! I'm Jhoel<br>💻 Software Developer | Passionate about Code & Innovation<br>Driven software developer with a strong focus on building scalable, efficient, and user-centric solutions. Passionate about problem-solving, continuous learning, and leveraging technology to create impactful digital experiences.<br><br>Dedicated to writing clean, maintainable code and collaborating on innovative projects that push boundaries. Always exploring new technologies and best practices to deliver high-quality software.<br><br>Let’s connect and build something great together!</h4>
 
 ###
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=JOURT1&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://streak-stats.demolab.com?user=JOURT1&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=JOURT1&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dark&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=JOURT1&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dark&locale=en&hide_border=false" height="130" alt="stats graph"  />
+  <img src="https://streak-stats.demolab.com?user=JOURT1&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5" height="130" alt="streak graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=JOURT1&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=6&theme=dark&hide_border=false" height="130" alt="languages graph"  />
 </div>
 
 ###
