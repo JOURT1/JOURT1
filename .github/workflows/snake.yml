@@ -2,8 +2,8 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Ejecuta el workflow todos los días a la medianoche UTC
-  workflow_dispatch:  # Permite ejecutar manualmente el workflow desde Actions
+    - cron: "0 0 * * *"  # Ejecuta el workflow diariamente a la medianoche UTC
+  workflow_dispatch:  # Permite ejecución manual
 
 jobs:
   generate:
@@ -18,8 +18,14 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           outputs: dist/snake.svg
 
+      - name: Ensure output directory exists
+        run: mkdir -p dist  # Crea la carpeta 'dist' si no existe
+
+      - name: Move generated snake file
+        run: mv snake.svg dist/snake.svg  # Mueve el archivo generado a 'dist'
+
       - name: Upload artifact
-        uses: actions/upload-artifact@v4  # ACTUALIZADO a v4
+        uses: actions/upload-artifact@v4  # Última versión
         with:
           name: snake-artifact
           path: dist/snake.svg
@@ -28,6 +34,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: dist  # Se asegura de que la carpeta 'dist' exista
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
